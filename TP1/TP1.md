@@ -31,10 +31,12 @@ Editar (o crear si no existe) el archivo .gitignore agregando los archivos *.bak
 Crear un commit y proveer un mensaje descriptivo
 Intentar un push al repo remoto
 
+![Descripción de la imagen](imagen2.png)
+![Descripción de la imagen](imagen3.png)
 
 En caso de ser necesario configurar las claves SSH requeridas y reintentar el push.
 
-
+![Descripción de la imagen](imagen4.png)
 
 5- Creación de Repos 02-> Crearlo localmente y subirlo a GitHub
 Crear un repo local
@@ -45,7 +47,8 @@ Crear archivo .gitignore
 Crear un commit y proveer un mensaje descriptivo
 Subir cambios.
 
-
+![Descripción de la imagen](imagen5.png)
+![Descripción de la imagen](imagen6.png)
 
 6- Ramas
 Crear una nueva rama
@@ -53,7 +56,9 @@ Cambiarse a esa rama
 Hacer un cambio en el archivo Readme.md y hacer commit
 Revisar la diferencia entre ramas
 
-
+![Descripción de la imagen](imagen7.png)
+![Descripción de la imagen](imagen8.png)
+![Descripción de la imagen](imagen9.png)
 
 
 7- Merges
@@ -62,7 +67,10 @@ Borrar la rama creada
 Ver el log de commits
 Repetir el ejercicio 6 para poder hacer un merge con No-FF
 
-
+![Descripción de la imagen](imagen10.png)
+![Descripción de la imagen](imagen11.png)
+![Descripción de la imagen](imagen12.png)
+![Descripción de la imagen](imagen13.png)
 
 
 
@@ -83,12 +91,12 @@ Resolver el conflicto con git mergetool
 Agregar .orig al .gitignore
 Hacer commit y push
 
-
-
-
-
-
-
+![Descripción de la imagen](imagen14.png)
+![Descripción de la imagen](imagen15.png)
+![Descripción de la imagen](imagen16.png)
+![Descripción de la imagen](imagen17.png)
+![Descripción de la imagen](imagen18.png)
+![Descripción de la imagen](imagen19.png)
 
 
 
@@ -102,8 +110,9 @@ Subir el cambio a dicho branch y crear un pull request.
 Completar el proceso de revisión en github y mergear el PR al branch master.
 \
 
-
-
+![Descripción de la imagen](imagen20.png)
+![Descripción de la imagen](imagen21.png)
+![Descripción de la imagen](imagen22.png)
 
 10- Algunos ejercicios online
 Entrar a la página https://learngitbranching.js.org/
