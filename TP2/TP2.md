@@ -207,7 +207,9 @@ Conectarse a la base utilizando alguna IDE (Dbeaver - https://dbeaver.io/, Azure
 
 
 Explicar que se logró con el comando docker run y docker exec ejecutados en este ejercicio.
+
 docker run: Crea e inicia un nuevo contenedor a partir de una imagen Docker, configurando puertos y volúmenes según sea necesario.
+
 docker exec:Ejecuta comandos en un contenedor que ya está en ejecución, permitiendo acceder y modificar su entorno.
 
 # 12- Hacer el punto 11 con Microsoft SQL Server
