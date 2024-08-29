@@ -38,7 +38,8 @@ GitHub, Jenkins, Docker, Kubernetes.
 Marketplace de extensiones
 
 Añadir funcionalidades adicionales a Azure DevOps.
-#3- Pasos del TP
+
+# 3- Pasos del TP
 3.1 Crear una cuenta en Azure DevOps
 3.2 Crear un proyecto Sample01
 3.3 Crear un repo GIT desde cero
