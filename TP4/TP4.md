@@ -25,11 +25,21 @@ En resumen, CI se centra en la integración continua de cambios de código y pru
 
 # 3- Consignas a desarrollar en el trabajo práctico:
 Azure DevOps Pipelines
+Breve descripción de Azure DevOps Pipelines:
+		Azure DevOps Pipelines es un servicio de CI/CD para compilar, probar y desplegar aplicaciones de forma automatizada.
 
-Breve descripción de Azure DevOps Pipelines.
-Tipos de Pipelines: Build y Deploy.
-Diferencias entre editor clásico y YAML.
-Agentes MS y Self-Hosted
+Tipos de Pipelines: Build y Deploy:
+		Build Pipelines: Compilan el código y crean artefactos listos para desplegar.
+		Deploy Pipelines: Despliegan artefactos en diferentes entornos (desarrollo, pruebas, producción).
+
+Diferencias entre editor clásico y YAML:
+		Editor Clásico: Interfaz gráfica fácil de usar, menos flexible.
+		YAML: Pipelines como código, más flexible, requiere conocimientos básicos de scripting.
+
+Agentes MS y Self-Hosted:
+	Microsoft-Hosted Agents: Mantenidos por Microsoft, fáciles de usar, con limitaciones de recursos.
+	Self-Hosted Agents: Configurados por el usuario, mayor control y flexibilidad, requieren mantenimiento.
+
 
 # 4- Pasos del TP
 4.1 Verificar acceso a Pipelines concedido
