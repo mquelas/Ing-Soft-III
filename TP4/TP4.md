@@ -26,40 +26,143 @@ En resumen, CI se centra en la integración continua de cambios de código y pru
 # 3- Consignas a desarrollar en el trabajo práctico:
 Azure DevOps Pipelines
 Breve descripción de Azure DevOps Pipelines:
-		Azure DevOps Pipelines es un servicio de CI/CD para compilar, probar y desplegar aplicaciones de forma automatizada.
+
+--Azure DevOps Pipelines es un servicio de CI/CD para compilar, probar y desplegar aplicaciones de forma automatizada.
 
 Tipos de Pipelines: Build y Deploy:
-		Build Pipelines: Compilan el código y crean artefactos listos para desplegar.
-		Deploy Pipelines: Despliegan artefactos en diferentes entornos (desarrollo, pruebas, producción).
+
+--Build Pipelines: Compilan el código y crean artefactos listos para desplegar.
+
+--Deploy Pipelines: Despliegan artefactos en diferentes entornos (desarrollo, pruebas, producción).
 
 Diferencias entre editor clásico y YAML:
-		Editor Clásico: Interfaz gráfica fácil de usar, menos flexible.
-		YAML: Pipelines como código, más flexible, requiere conocimientos básicos de scripting.
+	
+--Editor Clásico: Interfaz gráfica fácil de usar, menos flexible.
+
+--YAML: Pipelines como código, más flexible, requiere conocimientos básicos de scripting.
 
 Agentes MS y Self-Hosted:
-	Microsoft-Hosted Agents: Mantenidos por Microsoft, fáciles de usar, con limitaciones de recursos.
-	Self-Hosted Agents: Configurados por el usuario, mayor control y flexibilidad, requieren mantenimiento.
 
+--Microsoft-Hosted Agents: Mantenidos por Microsoft, fáciles de usar, con limitaciones de recursos.
+
+--Self-Hosted Agents: Configurados por el usuario, mayor control y flexibilidad, requieren mantenimiento.
 
 # 4- Pasos del TP
 4.1 Verificar acceso a Pipelines concedido
+
+
 4.2 Agregar en pipeline YAML una tarea de Publish.
+
+
+
+
 4.3 Explicar por qué es necesario contar con una tarea de Publish en un pipeline que corre en un agente de Microsoft en la nube.
+
+--Persistencia de Artefactos: Guarda los archivos generados durante la construcción para su uso posterior.
+
+--Separación de Fases: Separa la construcción del despliegue, permitiendo que los artefactos se usen en diferentes etapas.
+
+--Despliegue en Múltiples Entornos: Permite desplegar los mismos artefactos en entornos de staging y producción.
+
+--Auditoría y Trazabilidad: Facilita el seguimiento de versiones específicas y su correlación con el código fuente.
+
+--Colaboración entre Pipelines: Los artefactos publicados pueden ser reutilizados en otros pipelines o etapas.
+
 4.4 Descargar el resultado del pipeline y correr localmente el software compilado.
+
+
+
+
 4.5 Habilitar el editor clásico de pipelines. Explicar las diferencias claves entre este tipo de editor y el editor YAML.
+
+
+-Un editor de texto general es versátil y puede manejar una variedad de formatos y lenguajes, un editor YAML específico está optimizado para trabajar con la estructura y sintaxis particular del formato YAML, proporcionando herramientas y características especializadas para este propósito.
+
 4.6 Crear un nuevo pipeline con el editor clásico. Descargar el resultado del pipeline y correr localmente el software compilado.
+
+
+
+
+
+
+
+
 4.7 Configurar CI en ambos pipelines (YAML y Classic Editor). Mostrar resultados de la ejecución automática de ambos pipelines al hacer un commit en la rama main.
+
+Classic Editor:
+
+
+
+YAML:
+
+
+
+
+
 4.8 Explicar la diferencia entre un agente MS y un agente Self-Hosted. Qué ventajas y desventajas hay entre ambos? Cuándo es conveniente y/o necesario usar un Self-Hosted Agent?
+
+--Agentes MS (Microsoft-hosted):
+	
+	Ventajas: Mantenimiento automático, no requiere configuración.
+	Desventajas: Menos control, tiempos de ejecución limitados.
+
+--Agentes Self-Hosted:
+	
+	Ventajas: Control total, mejor rendimiento, posible ahorro.
+	Desventajas: Necesita mantenimiento y configuración.
+
+--Uso de Self-Hosted: Cuando necesitas un entorno personalizado, mayor rendimiento o tienes alta demanda de construcción.
+
 4.8 Crear un Pool de Agentes y un Agente Self-Hosted
+
+
+
 4.9 Instalar y correr un agente en nuestra máquina local.
+
+
+
+
+
+
+
 4.10 Crear un pipeline que use el agente Self-Hosted alojado en nuestra máquina local.
+
+
+
+
 4.11 Buscar el resultado del pipeline y correr localmente el software compilado.
+
+
 4.12 Crear un nuevo proyecto en ADO clonado desde un repo que contenga una aplicación en Angular como por ejemplo https://github.com/ingsoft3ucc/angular-demo-project.git
+
+
+
 4.13 Configurar un pipeline de build para un proyecto de tipo Angular como el clonado.
+
+
+
+
 4.14 Habilitar CI para el pipeline.
+
 4.15 Hacer un cambio a un archivo del proyecto (algún cambio en el HTML que se renderiza por ejemplo) y verificar que se ejecute automáticamente el pipeline.
+
+
+
+
+
 4.16 Descargar el resultado del pipeline y correr en un servidor web local el sitio construido.
+
+
+
+
+
+
 4.17 Mostrar el antes y el después del cambio.
+Como se puede ver se le agrego una barra de search
+
+
+
+
 
 # 5- Presentación del trabajo práctico.
 Subir un doc al repo con las capturas de pantalla de los pasos realizados y colocar en el excel de repos (https://docs.google.com/spreadsheets/d/1mZKJ8FH390QHjwkABokh3Ys6kMOFZGzZJ3-kg5ziELc/edit?gid=0#gid=0) la url del proyecto de AzureDevops.
