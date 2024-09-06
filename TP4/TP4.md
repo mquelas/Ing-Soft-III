@@ -49,10 +49,13 @@ Agentes MS y Self-Hosted:
 
 # 4- Pasos del TP
 4.1 Verificar acceso a Pipelines concedido
+![Descripción de la imagen](Imagen1.png)
+![Descripción de la imagen](Imagen2.png)
 
 
 4.2 Agregar en pipeline YAML una tarea de Publish.
-
+![Descripción de la imagen](Imagen3.png)
+![Descripción de la imagen](Imagen4.png)
 
 
 
@@ -69,34 +72,33 @@ Agentes MS y Self-Hosted:
 --Colaboración entre Pipelines: Los artefactos publicados pueden ser reutilizados en otros pipelines o etapas.
 
 4.4 Descargar el resultado del pipeline y correr localmente el software compilado.
-
-
+![Descripción de la imagen](Imagen5.png)
 
 
 4.5 Habilitar el editor clásico de pipelines. Explicar las diferencias claves entre este tipo de editor y el editor YAML.
 
+![Descripción de la imagen](Imagen6.png)
 
 -Un editor de texto general es versátil y puede manejar una variedad de formatos y lenguajes, un editor YAML específico está optimizado para trabajar con la estructura y sintaxis particular del formato YAML, proporcionando herramientas y características especializadas para este propósito.
 
 4.6 Crear un nuevo pipeline con el editor clásico. Descargar el resultado del pipeline y correr localmente el software compilado.
 
-
-
-
-
-
+![Descripción de la imagen](Imagen7.png)
+![Descripción de la imagen](Imagen8.png)
+![Descripción de la imagen](Imagen9.png)
+![Descripción de la imagen](Imagen10.png)
 
 
 4.7 Configurar CI en ambos pipelines (YAML y Classic Editor). Mostrar resultados de la ejecución automática de ambos pipelines al hacer un commit en la rama main.
 
 Classic Editor:
 
-
+![Descripción de la imagen](Imagen11.png)
 
 YAML:
 
-
-
+![Descripción de la imagen](Imagen12.png)
+![Descripción de la imagen](Imagen13.png)
 
 
 4.8 Explicar la diferencia entre un agente MS y un agente Self-Hosted. Qué ventajas y desventajas hay entre ambos? Cuándo es conveniente y/o necesario usar un Self-Hosted Agent?
@@ -115,52 +117,62 @@ YAML:
 
 4.8 Crear un Pool de Agentes y un Agente Self-Hosted
 
+![Descripción de la imagen](Imagen14.png)
+![Descripción de la imagen](Imagen15.png)
 
 
 4.9 Instalar y correr un agente en nuestra máquina local.
 
-
-
-
-
+![Descripción de la imagen](Imagen16.png)
+![Descripción de la imagen](Imagen17.png)
+![Descripción de la imagen](Imagen18.png)
 
 
 4.10 Crear un pipeline que use el agente Self-Hosted alojado en nuestra máquina local.
 
-
+![Descripción de la imagen](Imagen19.png)
+![Descripción de la imagen](Imagen20.png)
 
 
 4.11 Buscar el resultado del pipeline y correr localmente el software compilado.
 
+![Descripción de la imagen](Imagen21.png)
+
 
 4.12 Crear un nuevo proyecto en ADO clonado desde un repo que contenga una aplicación en Angular como por ejemplo https://github.com/ingsoft3ucc/angular-demo-project.git
 
-
+![Descripción de la imagen](Imagen22.png)
+![Descripción de la imagen](Imagen23.png)
 
 4.13 Configurar un pipeline de build para un proyecto de tipo Angular como el clonado.
 
-
+![Descripción de la imagen](Imagen24.png)
+![Descripción de la imagen](Imagen25.png)
 
 
 4.14 Habilitar CI para el pipeline.
 
+![Descripción de la imagen](Imagen26.png)
+
+
 4.15 Hacer un cambio a un archivo del proyecto (algún cambio en el HTML que se renderiza por ejemplo) y verificar que se ejecute automáticamente el pipeline.
 
-
-
+![Descripción de la imagen](Imagen27.png)
+![Descripción de la imagen](Imagen28.png)
 
 
 4.16 Descargar el resultado del pipeline y correr en un servidor web local el sitio construido.
 
-
-
-
+![Descripción de la imagen](Imagen29.png)
+![Descripción de la imagen](Imagen30.png)
+![Descripción de la imagen](Imagen31.png)
 
 
 4.17 Mostrar el antes y el después del cambio.
-Como se puede ver se le agrego una barra de search
+		
+		Como se puede ver se le agrego una barra de search
 
-
+![Descripción de la imagen](Imagen32.png)
 
 
 
