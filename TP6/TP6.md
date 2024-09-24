@@ -115,24 +115,148 @@ Ingeniería de software III
 
 	F. En el directorio raiz de nuestro proyecto EmployeeCrudAngular ejecutamos el comando
 
-	G. Vemos que se abre una ventana de Karma con Jasmine en la que nos indica que los tests se ejecutaron correctamente
+![Descripción de la imagen](Imagen27.png)
 
+*Cómo devolvió ese error*
+
+*Cambie el Employee.service.ts por este codigo*
+
+![Descripción de la imagen](Imagen28.png)
+
+	import { Injectable } from '@angular/core';
+	import { HttpClient, HttpHeaders } from '@angular/common/http';
+	import { Observable } from 'rxjs';
+	import { Employee } from './employee.model';
+	import { map } from 'rxjs/operators';
+	import { environment } from '../environments/environment'; // Importa el environment
+	@Injectable({
+		providedIn: 'root',
+	})
+	export class EmployeeService {
+		apiUrlEmployee = environment.apiUrl; // Usa el valor de environment
+		constructor(private http: HttpClient) {}
+	
+	getAllEmployee(): Observable<Employee[]> {
+    return this.http.get<Employee[]>(this.apiUrlEmployee + '/getall').pipe(
+      map((data: Employee[]) =>
+        data.map(
+          (item: Employee) =>
+            new Employee(
+              item.id,
+              item.name,
+              item.createdDate // No transformamos la fecha aquí
+            )
+        )
+      )
+    );
+	}
+	
+	getEmployeeById(employeeId: number): Observable<Employee> {
+    return this.http.get<Employee>(
+      this.apiUrlEmployee + '/getbyid/?id=' + employeeId
+    );
+	}
+	
+	createEmployee(employee: Employee): Observable<Employee> {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    };
+    return this.http.post<Employee>(
+      this.apiUrlEmployee + '/create',
+      employee,
+      httpOptions
+    );
+	}
+	
+	updateEmployee(employee: Employee): Observable<Employee> {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    };
+    return this.http.put<Employee>(
+      this.apiUrlEmployee + '/update',
+      employee,
+      httpOptions
+    );
+	}
+	
+	deleteEmployeeById(employeeid: number) {
+    return this.http.delete(this.apiUrlEmployee + '/Delete/?id=' + employeeid);
+	}
+	}
+
+*Cambie el Employee.service.spec.ts por este código*
+
+![Descripción de la imagen](Imagen29.png)
+
+	import { TestBed } from '@angular/core/testing';
+	import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+	import { EmployeeService } from './employee.service';
+	import { Employee } from './employee.model';
+	describe('EmployeeService', () => {
+		let service: EmployeeService;
+		let httpMock: HttpTestingController;
+		beforeEach(() => {
+    		TestBed.configureTestingModule({
+      		  imports: [HttpClientTestingModule],
+      		providers: [EmployeeService]
+    		});
+    
+	service = TestBed.inject(EmployeeService);
+    httpMock = TestBed.inject(HttpTestingController);
+	});
+	afterEach(() => {
+    httpMock.verify();
+	 });
+	 
+	 it('should retrieve all employees by name', () => {
+    const dummyEmployees: Employee[] = [
+      new Employee(1, 'John Doe'),
+      new Employee(2, 'Jane Smith')
+    ];
+    
+	service.getAllEmployee().subscribe(employees => {
+      expect(employees.length).toBe(2);
+      employees.forEach((employee, index) => {
+        expect(employee.name).toEqual(dummyEmployees[index].name);  // Validación por nombre
+      });
+    });
+	
+    const req = httpMock.expectOne(`${service.apiUrlEmployee}/getall`);
+    expect(req.request.method).toBe('GET');
+    req.flush(dummyEmployees);
+	  });
+	});
+
+![Descripción de la imagen](Imagen30.png)
+
+	G. Vemos que se abre una ventana de Karma con Jasmine en la que nos indica que los tests se ejecutaron correctamente
+	y	
 	H. Vemos que los tests se ejecutaron correctamente: 
+
+![Descripción de la imagen](Imagen31.png)
 
 	I. Verificamos que no esté corriendo nuestra API navegando a http://localhost:7150/swagger/index.html y recibiendo esta salida:
 
-	J. Los puntos G y H nos indican que se han ejecutado correctamente las pruebas inclusive sin tener acceso a la API, lo que confirma que es efectivamente un conjunto de pruebas unitarias que no requieres de una dependencia externa para funcionar.
+![Descripción de la imagen](Imagen32.png)
 
 
 # 4.5 Agregamos generación de reporte XML de nuestras pruebas de front.
 
 	A. Instalamos dependencia karma-junit-reporter
 
+![Descripción de la imagen](Imagen33.png)
+
 	B. En el directorio raiz de nuestro proyecto (al mismo nivel que el archivo angular.json) creamos un archivo karma.conf.js con el siguiente contenido
+
+![Descripción de la imagen](Imagen34.png)
 
 	C. Ejecutamos nuestros test de la siguiente manera:
 
+![Descripción de la imagen](Imagen35.png)
+
 	D. Verificamos que se creo un archivo test-result.xml en el directorio test-results que está al mismo nivel que el directorio src
+
+![Descripción de la imagen](Imagen36.png)
 
 # 4.6 Modificamos el código de nuestra API y creamos nuevas pruebas unitarias:
 
