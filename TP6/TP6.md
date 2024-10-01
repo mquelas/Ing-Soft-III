@@ -262,17 +262,28 @@ Ingeniería de software III
 
 	A. Realizar al menos 5 de las siguientes modificaciones sugeridas al código de la API:
 
+![Descripción de la imagen](Imagen37.png)
+
 	B. Crear las pruebas unitarias necesarias para validar las modificaciones realizadas en el código
+
+![Descripción de la imagen](Imagen38.png)
+![Descripción de la imagen](Imagen39.png)
 
 # 4.7 Modificamos el código de nuestro Front y creamos nuevas pruebas unitarias:
 
 	A. Realizar en el código del front las mismas modificaciones hechas a la API.
-
 	B. Las validaciones deben ser realizadas en el front sin llegar a la API, y deben ser mostradas en un toast como por ejemplo https://stackblitz.com/edit/angular12-toastr?file=src%2Fapp%2Fapp.component.ts o https://stackblitz.com/edit/angular-error-toast?file=src%2Fapp%2Fcore%2Frxjsops.ts
+
+![Descripción de la imagen](Imagen40.png)
+![Descripción de la imagen](Imagen41.png)
+![Descripción de la imagen](Imagen42.png)
+![Descripción de la imagen](Imagen43.png)
+![Descripción de la imagen](Imagen44.png)
 
 	C. Crear las pruebas unitarias necesarias en el front para validar las modificaciones realizadas en el código del front.
 
-
+![Descripción de la imagen](Imagen45.png)
+![Descripción de la imagen](Imagen46.png)
 
 
 
