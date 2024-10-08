@@ -108,35 +108,57 @@ Ingeniería de software III
 	En la carpeta cypress/e2e, crear un archivo con el nombre primer_test.js y agregar el siguiente código para probar la página de inicio de nuestro front:
 
 ![Descripción de la imagen](Imagen17.png)
+![Descripción de la imagen](Imagen18.png)
 
 	4.3.5 Correr nuestra primera prueba
 	Si está abierta la interfaz gráfica de Cypress, aparecerá el archivo primer_test.cy.js en la lista de pruebas. Clic en el archivo para ejecutar la prueba. image image
 
+![Descripción de la imagen](Imagen19.png)
+
+**-Corro localmente el back y front para que me funciones el cypress de primer test**
+
+![Descripción de la imagen](Imagen20.png)
+
 	También es posible ejecutar Cypress en modo "headless" (sin interfaz gráfica) utilizando el siguiente comando:
 	npx cypress run
 
+![Descripción de la imagen](Imagen21.png)
+
 	4.3.6 Modificar nuestra prueba para que falle.
 	Editamos el archivo primer_test.cy.js y hacemos que espere otra cosa en el título
+	
+
+![Descripción de la imagen](Imagen22.png)
+
 	Ejecutamos cypress en modo headless.
 	Cypress captura automáticamente pantallas cuando una prueba falla. Las capturas de pantalla se guardan en la carpeta cypress/screenshots. 
+
+![Descripción de la imagen](Imagen23.png)
 
 	4.3.6 Grabar nuestras pruebas para que Cypress genere código automático y genere reportes:
 	Cerramos Cypress
 	Editamos el archivo cypress.config.ts incluyendo la propiedad experimentalStudio en true y la configuración de reportería.
 
+![Descripción de la imagen](Imagen24.png)
 
 	Corremos nuevamente Cypress con npx cypress open, una vez que se ejecute nuestra prueba tendremos la opción de "Add Commands to Test". Esto permitirá interactuar con la aplicación y generar automáticamente comandos de prueba basados en las interacciones con la página:
 	Por ejemplo, si agregamos un nuevo empleado y luego verificamos que esté en la lista, Cypress nos generará un código como este:
 
+![Descripción de la imagen](Imagen25.png)
 
 	Por supuesto que habrá que hacerle ajustes, como por ejemplo que se fije siempre en la última fila de la grilla y no en la posición 15 como lo grabó, es ahí cuando consultando la documentación de Cypress debemos ver cómo modificar el código, en nuestro caso de ejemplo sería así:
+
+![Descripción de la imagen](Imagen26.png)
 
 	4.3.7 Hacemos prueba de editar un empleado
 	Creamos en cypress/e2e/ un archivo editEmployee_test.cy.js con el siguiente contenido, guardamos y aparecerá en Cypress:
 
+![Descripción de la imagen](Imagen27.png)
 
+	Hacemos "Add command to the test" y empezamos a interactuar con la página 
+	Hacemos algunos ajustes al código generado:
 
-
+![Descripción de la imagen](Imagen28.png)
 
 
 
