@@ -78,16 +78,34 @@ Azure CLI instalado
 		4.1.10 - Ejecutar el pipeline y en Azure Portal acceder al recurso de Azure Container Instances creado. Copiar la url del contenedor y navegarlo desde browser. Verificar que traiga datos.
 
 ![Descripción de la imagen](Imagen21.png)
+![Descripción de la imagen](Imagen22.png)
+![Descripción de la imagen](Imagen23.png)
 
-		Corregimos nuestro archivo de /api/dockerfile
+
 
 		4.1.11 - Agregar tareas para generar un recurso Azure Container Instances que levante un contenedor con nuestra imagen de front (DESAFIO)
 		A la etapa creada en 4.1.9 Agregar tareas para generar contenedor en ACI con nuestra 
 		Tener en cuenta que el contenedor debe recibir como variable de entorno API_URL el valor de una variable container-url-api-qa definida en nuestro pipeline.
 		Para que el punto anterior funcione el código fuente del front debe ser modificado para que la url de la API pueda ser cambiada luego de haber sido construída la imagen. Se deja un ejemplo de las modificaciones a realizar en el repo https://github.com/ingsoft3ucc/CrudAngularConEnvironment.git
 
+![Descripción de la imagen](Imagen24.png)
+![Descripción de la imagen](Imagen25.png)
+![Descripción de la imagen](Imagen26.png)
+![Descripción de la imagen](Imagen27.png)
+![Descripción de la imagen](Imagen28.png)
+
+
 		4.1.12 - Agregar tareas para correr pruebas de integración en el entorno de QA de Back y Front creado en ACI.
+
+![Descripción de la imagen](Imagen29.png)
+![Descripción de la imagen](Imagen30.png)
+
 
 	4.2 Desafíos:
 
 		4.2.4 Agregar etapa que dependa de la etapa de Deploy en ACI QA y genere contenedores en ACI para entorno de PROD.
+
+![Descripción de la imagen](Imagen31.png)
+![Descripción de la imagen](Imagen32.png)
+![Descripción de la imagen](Imagen33.png)
+![Descripción de la imagen](Imagen34.png)
