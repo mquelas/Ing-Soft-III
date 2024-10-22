@@ -109,3 +109,5 @@ Azure CLI instalado
 ![Descripción de la imagen](Imagen32.png)
 ![Descripción de la imagen](Imagen33.png)
 ![Descripción de la imagen](Imagen34.png)
+![Descripción de la imagen](Imagen35.png)
+![Descripción de la imagen](Imagen36.png)
